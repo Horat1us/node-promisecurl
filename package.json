@@ -53,7 +53,7 @@
     "node": true
   },
   "dependencies": {
-    "cookiefile": "^1.0.6",
+    "cookiefile": "^1.0.7",
     "node-libcurl": "^1.0.0"
   }
 }
