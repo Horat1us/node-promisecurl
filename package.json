@@ -1,0 +1,59 @@
+{
+  "name": "promisecurl",
+  "version": "1.0.0",
+  "description": "Promise wrapper for node-libcurl",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/_mocha tests/test.js",
+    "build-libcurl": "npm install node-libcurl --build-from-souce"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horat1us/node-promisecurl.git"
+  },
+  "keywords": [
+    "promise",
+    "curl",
+    "libcurl",
+    "cookiefile",
+    "cookie",
+    "wget",
+    "request",
+    "response",
+    "headers"
+  ],
+  "author": "Alexander Letnikow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Horat1us/node-promisecurl/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "http-proxy": "^1.15.1",
+    "mocha": "^3.1.2",
+    "multiparty": "^4.1.2"
+  },
+  "homepage": "https://github.com/Horat1us/node-promisecurl#readme",
+  "jshintConfig": {
+    "nodejs": true,
+    "camelcase": true,
+    "esversion": 6,
+    "curly": true,
+    "maxparams": 3,
+    "strict": "global",
+    "undef": true,
+    "unused": true,
+    "varstmt": true,
+    "devel": true,
+    "node": true
+  },
+  "dependencies": {
+    "cookiefile": "^1.0.6",
+    "node-libcurl": "^1.0.0"
+  }
+}
