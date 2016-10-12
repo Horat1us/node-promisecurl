@@ -1,6 +1,6 @@
 {
   "name": "promisecurl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Promise wrapper for node-libcurl",
   "main": "index.js",
   "directories": {
