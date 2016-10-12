@@ -89,7 +89,12 @@ module.exports = {
                         const responseHeader = header.toString();
 
                         responseHeaders.push(responseHeader);
-                        this.cookieMap.header(responseHeader);
+                        try {
+                            this.cookieMap.header(responseHeader);
+                        } catch (Error) {
+                            this.cookieMap.header(responseHeader, {domain: require('url').parse(url).hostname});
+                        }
+
                     })
                     .on('end', (statusCode, body) => {
                         responseHeaders
