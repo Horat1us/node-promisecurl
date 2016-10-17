@@ -39,7 +39,8 @@ module.exports = {
             data: postdata = false,
             url,
             followLocation = true,
-            timeout = this.timeout
+            timeout = this.timeout,
+            currentOptions = {}
         }) {
             if (typeof(method) !== 'string') {
                 throw new module.exports.PromiseCurlError(3);
@@ -60,9 +61,9 @@ module.exports = {
                 httpHeader.filter(header => header.substr(0, 6) !== 'Cookie');
                 httpHeader.push(cookies.toRequestHeader());
 
-                let currentOptions = {
+                Object.assign(currentOptions, {
                     referer, timeout, followLocation, url, httpHeader,
-                };
+                });
                 if (method == 'POST' && postdata !== false) {
                     if (Array.isArray(postdata)) {
                         currentOptions.httppost = postdata;

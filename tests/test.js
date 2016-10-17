@@ -11,7 +11,7 @@ const assert = require('assert'),
 
 describe('PromiseCurl Main Tests', () => {
     const
-        {Cookie} = require('cookiefile'),
+        {Cookie, CookieMap} = require('cookiefile'),
         Url = require('url'),
         PostRequestInit = (request, response, onData) => {
             response.writeHead(200, "Success", {"X-Test-Success": true});
